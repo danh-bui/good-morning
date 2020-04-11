@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      font-size: 4rem;
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+  <h1>Good Morning!</h1>
+  <script>
+    const h1El = document.querySelector("h1");
+    const date = new Date();
+    const hours = date.getHours();
+
+    if (hours < 12) {
+      h1El.innerHTML = "Good Morning!";
+      document.title = "Good Morning!";
+    } else if (hours >= 12 && hours < 17) {
+      h1El.innerHTML = "Good Afternoon!";
+      document.title = "Good Afternoon!";
+    } else {
+      h1El.innerHTML = "Good Night!";
+      document.title = "Good Night!";
+    }
+  </script>
+</body>
+</html>
